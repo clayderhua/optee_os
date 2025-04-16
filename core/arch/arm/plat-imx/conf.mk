@@ -71,7 +71,7 @@ mx8mn-flavorlist = \
 
 mx8mp-flavorlist = \
 	mx8mpevk \
-	mx8mp_rsb3720_6g
+	mx8mprsb3720a2
 
 mx8qm-flavorlist = \
 	mx8qmmek \
@@ -429,6 +429,13 @@ endif
 ifneq (,$(filter $(PLATFORM_FLAVOR),mx8mpevk))
 CFG_DDR_SIZE ?= UL(0x180000000)
 CFG_UART_BASE ?= UART2_BASE
+$(call force,CFG_CORE_LARGE_PHYS_ADDR,y)
+$(call force,CFG_CORE_ARM64_PA_BITS,36)
+endif
+
+ifneq (,$(filter $(PLATFORM_FLAVOR),mx8mprsb3720a2))
+CFG_DDR_SIZE ?= UL(0x180000000)
+CFG_UART_BASE ?= UART3_BASE
 $(call force,CFG_CORE_LARGE_PHYS_ADDR,y)
 $(call force,CFG_CORE_ARM64_PA_BITS,36)
 endif

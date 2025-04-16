@@ -37,6 +37,7 @@ boards_list=(
 	imx-mx8mmevk \
 	imx-mx8mnevk \
 	imx-mx8mpevk \
+	imx-mx8mprsb3720a2 \
 	imx-mx8qxpmek \
 	imx-mx8qmmek \
 	imx-mx8qmmekcockpita53 \
